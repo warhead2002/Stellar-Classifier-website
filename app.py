@@ -3,6 +3,7 @@ from flask_uploads import IMAGES,UploadSet,configure_uploads
 import classifier as cl
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'stellar-classifier'
 
 photos = UploadSet('photos', IMAGES)
 app.config['UPLOADED_PHOTOS_DEST'] = 'images'
